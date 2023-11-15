@@ -1,0 +1,74 @@
+// main: "style.less"
+
+// Button
+.btn{.in-block;.boxsize;.radius(4px);.tc;.medium;.break;.nowrap;.pointer;.valign;
+	// &:not(.btn-h32){
+	// 	@media @totablet{.btn-h40}
+	// 	@media @desktop{.btn-h48}
+	// }
+}
+.btn-icon{.bgpos(50%,50%);.text-hidden}
+.btn-text{
+	@media @mobile{.prl(0) !important}
+	@media @fromtablet{.btn-outline}
+}
+.btn-h32{.p(5px 12px 4px);.fs(14);
+	&.btn-radius{.radius(16px)}
+	&.btn-icon-right{.pr(32px);.bgpos(right 8px,top 50%);.bgs(16px)}
+}
+.btn-h40{.p(@input-padding-base);.fs(14);
+	&.btn-radius{.radius(20px)}
+	&.btn-icon{.bgs(20px)}
+	&.btn-icon-left{.pl(32px);.bgpos(8px,50%);.bgs(20px)}
+	&.btn-icon-right{.pr(32px);.bgpos(right 8px,top 50%);.bgs(20px)}
+}
+.btn-h44{.p(10px 16px 11px);.fs(14);
+	&.btn-radius{.radius(22px)}
+	&.btn-icon{.bgs(20px)}
+	&.btn-icon-left{.pl(32px);.bgpos(8px,50%);.bgs(20px)}
+	&.btn-icon-right{.pr(32px);.bgpos(right 8px,top 50%);.bgs(20px)}
+}
+.btn-h48{.p(@input-padding-large);.fs(16);
+	&.btn-radius{.radius(24px)}
+	&.btn-icon{.bgs(24px)}
+	&.btn-icon-left{.pl(38px);.bgpos(8px,50%);.bgs(24px)}
+	&.btn-icon-right{.pr(38px);.bgpos(right 8px,top 50%);.bgs(24px)}
+}
+.btn-h52{.p(13px 24px);.fs(16);
+	&.btn-radius{.radius(26px)}
+	&.btn-icon{.bgs(24px)}
+	&.btn-icon-left{.pl(38px);.bgpos(8px,50%);.bgs(24px)}
+	&.btn-icon-right{.pr(38px);.bgpos(right 8px,top 50%);.bgs(24px)}
+}
+.btn-h64{.p(18px 28px 19px);.fs(18);
+	&.btn-radius{.radius(32px)}
+	&.btn-icon{.bgs(24px)}
+	&.btn-icon-left{.pl(38px);.bgpos(8px,50%);.bgs(24px)}
+	&.btn-icon-right{.pr(38px);.bgpos(right 8px,top 50%);.bgs(24px)}
+}
+.btn-outline{.b;.bgw;.c(#666);
+	&:hover{.b(@color-primary);.c(@color-primary)}
+}
+.btn-outline-red{.b(@red);.bgw;.c(@red);
+	&:hover{.opacity(.6)}
+}
+.btn-outline-blue{.b(@blue);.bgw;.c(@blue);
+	&:hover{.opacity(.6)}
+}
+.btn-outline-primary{.b(@color-primary);.bgw;.c(@color-primary);
+	&:hover{.opacity(.6)}
+}
+.btn-fill-primary{.b(@color-primary);.bg(@color-primary);.medium;.c(#fff);
+	&:hover{.opacity(.6)}
+}
+.btn-fill-secondary{.b(@color-secondary);.bg(@color-secondary);.medium;.c(#fff);
+	&:hover{.opacity(.6)}
+}
+.btn-fill-white{.b(#fff);.bg(#fff);.medium;.c(#333);
+	&:hover{.opacity(.6)}
+}
+// .btn-gradient{background:rgb(70,56,214);background:linear-gradient(135deg, rgba(70,56,214,1) 0%, rgba(32,196,203,1) 100%);.c(#fff)}
+.btn-show-scroll{.fixed}
+.btn-gotop{.btn;right:20px;bottom:40px;.w(48px);.h(48px);.bg(@color-primary);.radius-oval;.material-icons;.lh(48px);.c(#fff);z-index:1;
+	@media @desktop{right:40px;bottom:80px;.w(64px);.h(64px);.lh(64px)}
+}

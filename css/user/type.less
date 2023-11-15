@@ -1,0 +1,88 @@
+// main: "style.less"
+
+.label{.boxsize;.prl(3px);.fs(11);.lh(16px);.tc;.valign;.break(keep-all);
+	&.fill-bluedark{.radius(2px);.b(@blue-dark);.bg(@blue-dark);.c(#fff)}
+	&.fill-greenlight{.radius(2px);.b(@green-light);.bg(@green-light);.c(#fff)}
+	&.outline-gray{.b(#999);.c(#666);
+		&.radius{.radius(2px)}
+	}
+	&.outline-blue{.b(fade(@blue,65%));.c(@blue)}
+	&.outline-skyblue{.b(fade(@skyblue,65%));.c(@skyblue)}
+	&.fill-primary{.in-block;.w(16px);.prl(0);.radius-oval;.bg(@color-primary);.fs(9);.montserrat;.c(#fff)}
+}
+.hyperlink{
+	&:hover{text-decoration:underline}
+	&:not(.link-blue){
+		&:hover{.c(#333)}
+	}
+	&.link-blue{.c(@link-color)}
+	&.tu{
+		&:hover{.c(@color-primary)}
+	}
+}
+
+.contents-title{.mtb(12px,32px);.fs(20);.c(@color-primary-dark);
+	@media @desktop{.mt(24px);.fs(40)}
+}
+.contents-description{.lh(2);
+	@media @desktop{.fs(18)}
+	& + .contents-description{.mt(@gap-mobile)}
+}
+.section-title{.pb(4px);.bb(#333,1px);.bold;
+	@media @desktop{.pb(12px);.fs(20)}
+}
+
+.text-scroll{.over-y-auto;.h(80px);.p(16px);.b;.bg(#f7f7f7);.tl;
+	@media @fromtablet{.h(200px);.p(24px)}
+	> li{
+		&:not(:first-child){.mt(16px);
+			@media @fromtablet{.mt(24px)}
+			h2{.mt(24px);
+				@media @fromtablet{.mt(40px)}
+			}
+		}
+		> *{.c(#333)}
+		p{
+			&:not(:first-child){.mt(8px)}
+		}
+		span{.c(@blue)}
+	}
+	h2{.bold;
+		@media @fromtablet{.fs(18)}
+	}
+	h3{.bold}
+	.bu-dot{.bu-dot(#999,14px);
+		> li{.mt(8px);.pl(16px);
+			&:before{.w(4px);.h(4px);.mt(-6px)}
+		}
+	}
+	.bu-minus,.bu-decimal-dot{.mt(4px)}
+	.table-stripe{.w-full;.mt(8px)}
+}
+.text-terms{
+	> li{
+		@media @mobile{.fs(14)}
+		&:not(:first-child){.mt(@gap-mobile);.pt(@gap-mobile);.bt}
+		> .bu-decimal-dot{
+			> li{
+				&:not(:first-child){.mt(16px)}
+			}
+		}
+	}
+	h3,h5{.bold}
+	.bu-minus,.bu-decimal-dot,p{.mt(8px)}
+}
+// .text-completed{.tc;
+// 	i{.in-block;.w(80px);.h(80px);.mtb(32px,20px);.bgimg('ico-check-oval-blue.png');.bgs;
+// 		@media @fromtablet{.w(120px);.h(120px);.mtb(52px,32px)}
+// 	}
+// 	h3{.fs(20);.bold;
+// 		@media @fromtablet{.fs(28)}
+// 	}
+// 	p{.mt(8px);.c(#999);
+// 		@media @fromtablet{.mt(12px)}
+// 	}
+// 	a,button{.w(180px);.mt(20px);
+// 		@media @fromtablet{.mt(32px)}
+// 	}
+// }

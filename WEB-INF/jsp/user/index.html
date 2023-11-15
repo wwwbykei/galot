@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주학은 제주의 언어 &middot; 역사 &middot; 민속 등을 담는 그릇이다">
+<meta name="keywords" content="제주학 연구센터">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="제주학 연구센터">
+<meta name="application-name" content="제주학 연구센터">
+<meta name="msapplication-TileColor" content="#bga495">
+<meta name="theme-color" content="#ffffff">
+<title>제주학 연구센터</title>
+<link rel="stylesheet" href="../../../css/user/style.css">
+<script src="../../../js/2023/jquery-1.11.0.min.js"></script>
+<script src="../../../js/2023/dropdown.js"></script>
+<script src="../../../js/2023/modal.js"></script>
+<script src="../../../js/2023/tab.js"></script>
+<script src="../../../js/2023/tooltipster.bundle.min.js"></script>
+<script src="../../../js/2023/slick.min.js"></script>
+<script>
+$( document ).ready( function(){
+	$( ".main-image" ).slick({
+		dots: true,
+	    customPaging: function(slider, i) { 
+	        return '<span>0'+ (i + 1) +'</span><span>' + $(slider.$slides[i]).attr('title') + '</span>';
+	    },
+	    arrows: false,
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    fade: true
+	});
+	$( ".section.news .banner" ).slick({
+		dots: true,
+	    arrows: false,
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    autoplay: true,
+	    autoplaySpeed: 2000
+	});
+	$( ".section.photo .list-card" ).slick({
+		dots: false,
+	    arrows: true,
+	    slidesToShow: 3,
+	    slidesToScroll: 3,
+	    prevArrow : "<button type='button' class='slick-prev'>arrow_back</button>",
+	    nextArrow : "<button type='button' class='slick-next'>arrow_forward</button>",
+	    responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+	    			slidesToScroll: 2
+	    		}
+			},
+			{
+				breakpoint: 768,
+				settings: 'unslick'
+			}
+		]
+	});
+});
+</script>
+<script src="../../../js/2023/style.js"></script>
+</head>
+
+<body class="page-home">
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header">
+	<nav class="nav-mobile">
+		<h1 class="navbar-brand"><a href="index.html" class="brand-image">제주학 연구센터</a></h1>
+		<a class="nav-btn">메뉴</a>
+		<a class="nav-search">제주학 아카이브 검색</a>
+	</nav>
+	<nav class="nav-menu">
+		<a class="nav-close">닫기</a>
+		<div class="content-wrap">
+			<div class="js-sns-clone"></div>
+			<script>
+				$( document ).ready( function(){
+					$( ".nav-sns" ).clone().appendTo( ".js-sns-clone" );
+				})
+			</script>
+			<h1 class="navbar-brand"><a href="index.html" class="brand-image">제주학 연구센터</a></h1>
+			<form class="search-group">
+				<input type="search" id="global-search-mobile" placeholder="제주학 아카이브 검색" title="제주학 아카이브 검색" class="input-border">
+				<button type="submit" class="ico-search btn">검색</button>
+			</form><!--//form-search-->
+		</div>
+		<div class="nav-gnb">
+			<ul class="content-wrap">
+				<li><a>제주학 아카이브</a>
+					<ul class="nav-lnb">
+						<li><a href="archive-list.html">아카이브 검색</a></li>
+						<li><a href="archive-new-list.html">신착자료 DB</a></li>
+						<li><a href="archive-deposit-guide.html">자료기탁 안내</a></li>
+						<li><a href="archive-deposit.html">오픈 아카이브</a></li>
+						<li><a href="archive-data.html">자료현황</a></li>
+					</ul>
+				</li>
+				<li><a>센터사업</a>
+					<ul class="nav-lnb">
+						<li><a href="business-vision.html">비전</a></li>
+						<li><a href="business-major.html">주요사업</a></li>
+						<li><a href="business-schedule-list.html">사업일정</a></li>
+						<li><a href="business-press-list.html">보도자료</a></li>
+					</ul>
+				</li>
+				<li><a>연구성과</a>
+					<ul class="nav-lnb">
+						<li><a href="result-books.html">제주학총서</a></li>
+						<li><a href="result-report-list.html">연구보고서</a></li>
+						<li><a href="result-seminar-list.html">세미나자료</a></li>
+						<li><a href="result-media-list.html">언론보도</a></li>
+						<li><a href="result-trend-list.html">제주학동향</a></li>
+					</ul>
+				</li>
+				<li><a>열린마당</a>
+					<ul class="nav-lnb">
+						<li><a href="community-news-list.html">센터소식</a></li>
+						<li><a href="community-photo-list.html">포토갤러리</a></li>
+						<li><a href="community-freeboard-list.html">자유게시판</a></li>
+						<li><a href="community-register.html">제주학 연구자등록</a></li>
+						<li><a href="community-realated.html">관련기관</a></li>
+					</ul>
+				</li>
+				<li><a>정보공개</a>
+					<ul class="nav-lnb">
+						<li><a href="information-administration-list.html">경영정보</a></li>
+						<li><a href="information-finance-list.html">예산 및 재무현황</a></li>
+						<li><a href="information-contract-list.html">계약정보</a></li>
+						<li><a href="information-system-list.html">정보공개제도</a></li>
+					</ul>
+				</li>
+				<li><a>센터소개</a>
+					<ul class="nav-lnb">
+						<li><a href="about-greetings.html">인사말</a></li>
+						<li><a href="about-history.html">연혁</a></li>
+						<li><a href="about-organization.html">조직 및 구성원</a></li>
+						<li><a href="about-location.html">찾아오시는 길</a></li>
+						<li><a href="about-sitemap.html">사이트맵</a></li>
+					</ul>
+				</li>
+				<li class="nochild">
+					<a href="">제주갈옷 아카이브</a>
+				</li>
+			</ul>
+		</div><!--//nav-gnb-->
+		<ul class="nav-sns">
+			<li><a href="https://www.facebook.com/jejubaturi" target="_blank" class="ico-facebook">페이스북</a></li>
+			<li><a href="https://www.instagram.com/jst.re.kr" target="_blank" class="ico-instagram">인스타그램</a></li>
+			<li><a href="https://www.youtube.com/channel/UC2GZZD4sWi3Ftj3zFN8yZDA" target="_blank" class="ico-youtube">유튜브</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div id="container">
+	<ul class="nav-direct-links">
+		
+		
+		
+		<!--20210615.변경-->
+		<li class="desktop-only"><a href="about-greetings.html"><i class="material-icons">business</i><span>센터소개</span></a></li>
+		<li class="desktop-only"><a href="archive-list.html"><i class="material-icons-outlined">inventory_2</i><span>아카이브</span></a></li>
+		<li class="desktop-only"><a href=""><i class="material-icons">import_contacts</i><span>제주어사전 다운로드</span></a></li>
+		<li><a href=""><i class="material-icons-outlined">call</i><span>제주어 종합상담실<br>1811-0515</span></a></li>
+		<!--//20210615.변경-->
+		
+		
+	</ul>
+	<ul class="main-image">
+		<li title="제주학" style="background-image:url(images/bg-home-study.jpg)">
+			<div>
+				<p>제주학은 제주의 언어 &middot; 역사 &middot; 민속 등을 담는 그릇이다</p>
+				<h3>열린 제주학, 따뜻한 제주학, 실천하는 제주학</h3>
+				<a href="about-greetings.html" class="btn-more">자세히보기<span>add</span></a>
+			</div>
+			<span>&copy; 서재철</span>
+		</li>
+		<li title="제주 역사" style="background-image:url(images/bg-home-history.jpg)">
+			<div>
+				<h3>제주 역사</h3>
+				<p>민간소장자료를 중심으로 흩어져 있는 기록자료 발굴 및 활용</p>
+				<a href="archive-list.html" class="btn-more">더보기<span>add</span></a>
+			</div>
+			<span>&copy; 서재철</span>
+		</li>
+		<li title="제주어" style="background-image:url(images/bg-home-language.jpg)">
+			<div>
+				<h3>제주어</h3>
+				<p>기억 속 언어를 현실 언어로 바꾸는 제주어 조사연구와 일상언어화 실현</p>
+				<a href="archive-list.html" class="btn-more">더보기<span>add</span></a>
+			</div>
+		</li>
+		<li title="제주 민속" style="background-image:url(images/bg-home-folk.jpg)">
+			<div>
+				<h3>제주 민속</h3>
+				<p>공동체 삶의 기억과 생활문화의 전통에 대한 조사연구 및 재창조</p>
+				<a href="archive-list.html" class="btn-more">더보기<span>add</span></a>
+			</div>
+			<span>&copy; 서재철</span>
+		</li>
+		<li title="제주 해녀" style="background-image:url(images/bg-home-women.jpg)">
+			<div>
+				<h3>제주 해녀</h3>
+				<p>제주 바당을 기억하고 되살리는 해녀문화에 대한 조사연구와 세계화</p>
+				<a href="archive-list.html" class="btn-more">더보기<span>add</span></a>
+			</div>
+			<span>&copy; 서재철</span>
+		</li>
+	</ul><!--//main-image-->
+	
+	<div class="section news">
+		<div class="content-wrap">
+			<div class="board">
+				<div class="section-header">
+					<ul class="nav-tab-fill">
+						<li class="active"><a data-toggle="tab" href="#tab-notice" class="btn">공지사항</a></li><!--20210615.id,텍스트변경-->
+						<li><a data-toggle="tab" href="#tab-press" class="btn">보도자료</a></li><!--20210615.텍스트변경-->
+						<li><a data-toggle="tab" href="#tab-info" class="btn">경영정보</a></li><!--20210615.id,텍스트변경-->
+					</ul>
+					<a href="community-news-list.html">더보기</a><!--20210615.추가-->
+				</div>
+				<div class="tab-content">
+					<ul id="tab-notice" class="tab-pane active list-home"><!--20210615.id변경-->
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<span>공지사항</span><!--20210615.불필요하면 삭제해주세요-->
+								<a href="community-news-view.html" class="hyperlink">제주어 포럼 ‘제주어를 눌다’ 지상 중계 자료집 발간</a>
+							</div>
+						</li>
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<span>자료</span><!--20210615.불필요하면 삭제해주세요-->
+								<a href="community-news-view.html" class="hyperlink">제2회 제주학 아카이브 '제주의 관혼상제' 사진 영상 공개 수집</a>
+							</div>
+						</li>
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<span>공지사항</span><!--20210615.불필요하면 삭제해주세요-->
+								<a href="community-news-view.html" class="hyperlink">2021 제주학 총서 및 번역서 출판비 지원 공모 선정 결과</a>
+							</div>
+						</li>
+						</li>
+					</ul><!--//tab-pane-->
+					<ul id="tab-press" class="tab-pane list-home">
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<a href="result-media-view.html" class="hyperlink">연구보고서 발간 『성 이시돌 목장 테쉬폰 주택 생활문화 조사 』한라일보</a>
+							</div>
+						</li>
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<a href="result-media-view.html" class="hyperlink">제주학연구센터와 제주평생교육장학진흥원 업무협약 체결</a>
+							</div>
+						</li>
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<a href="result-media-view.html" class="hyperlink">제주어종합상담실 문답사례집 《몰마농고장은 수선화마씨게》 발간</a>
+							</div>
+						</li>
+					</ul><!--//tab-pane-->
+					<ul id="tab-info" class="tab-pane list-home"><!--20210615.id변경-->
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<a href="result-trend-view.html" class="hyperlink">[제주도청-공보] 도 무형문화재 제10호 멸치후리는 노래 전승교육사에 이춘복씨 인정</a>
+							</div>
+						</li>
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<a href="result-trend-view.html" class="hyperlink">[제민일보] 제주학연구센터, 2021 연구비 지원 공모</a>
+							</div>
+						</li>
+						<li>
+							<div><span>2020-12</span>14</div>
+							<div>
+								<a href="result-trend-view.html" class="hyperlink">	[뉴제주신문] 제2회 제주학 아카이브 '제주 관혼상제' 사진영상 공개수집</a>
+							</div>
+						</li>
+					</ul><!--//tab-pane-->
+				</div>
+			</div><!--//board-->
+			<ul class="banner">
+				<li>
+					<a href="community-news-view.html">
+						<img src="images/sample/banner-001.png" alt="포스트 코로나 시대, 차별과 혐오를 넘어">
+					</a>
+				</li>
+				<li>
+					<a href="community-news-view.html">
+						<img src="images/sample/banner-002.png" alt="포스트 코로나 시대, 차별과 혐오를 넘어">
+					</a>
+				</li>
+				<li>
+					<a href="community-news-view.html">
+						<img src="images/sample/banner-003.png" alt="포스트 코로나 시대, 차별과 혐오를 넘어">
+					</a>
+				</li>
+			</ul><!--//banner-->
+		</div>
+	</div><!--//section news-->
+	
+	<div class="section photo">
+		<div class="content-wrap">
+			<div class="section-header">
+				<h3>포토갤러리</h3>
+				<a href="community-photo-list.html">더보기</a>
+			</div>
+			<ul class="list-card slick-shadow">
+				<li class="card-image">
+					<a href="community-photo-view.html">
+						<div class="image-container" style="background-image:url(images/sample/photo-001.jpg)"></div>
+						<div class="text">
+							<h6>제주학연구센터 업무협약식</h6>
+							<p>2020-12-20</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-image">
+					<a href="community-photo-view.html">
+						<div class="image-container" style="background-image:url(images/sample/photo-002.jpg)"></div>
+						<div class="text">
+							<h6>제주학연구센터 업무협약식</h6>
+							<p>2020-12-20</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-image">
+					<a href="community-photo-view.html">
+						<div class="image-container" style="background-image:url(images/sample/photo-003.jpg)"></div>
+						<div class="text">
+							<h6>제주학연구센터 - 제주평생교육장학진흥원 간 업무협약식(2021.3.04.)제주학연구센터 - 제주평생교육장학진흥원 간 업무협약식(2021.3.04.)</h6>
+							<p>2020-12-20</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-image fromtablet-only">
+					<a href="community-photo-view.html">
+						<div class="image-container" style="background-image:url(images/sample/photo-001.jpg)"></div>
+						<div class="text">
+							<h6>제주학연구센터 - 제주평생교육장학진흥원 간 업무협약식(2021.3.04.)</h6>
+							<p>2020-12-20</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-image fromtablet-only">
+					<a href="community-photo-view.html">
+						<div class="image-container" style="background-image:url(images/sample/photo-001.jpg)"></div>
+						<div class="text">
+							<h6>제주학연구센터 - 제주평생교육장학진흥원 간 업무협약식(2021.3.04.)</h6>
+							<p>2020-12-20</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-image fromtablet-only">
+					<a href="community-photo-view.html">
+						<div class="image-container" style="background-image:url(images/sample/photo-001.jpg)"></div>
+						<div class="text">
+							<h6>제주학연구센터 - 제주평생교육장학진흥원 간 업무협약식(2021.3.04.)</h6>
+							<p>2020-12-20</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div><!--//section photo-->
+	
+	<div class="section book">
+		<div class="content-wrap">
+			<div class="section-header">
+				<h3>발간자료</h3><!--20210615.텍스트변경-->
+				
+				<!--20210615.추가-->
+				<ul class="nav-tab-fill">
+					<li class="active"><a data-toggle="tab" href="#tab-book" class="btn">제주학총서</a></li>
+					<li><a data-toggle="tab" href="#tab-history" class="btn">제주역사자료학총서</a></li>
+				</ul>
+				<!--//20210615.추가-->
+				
+				<a href="result-books.html">더보기</a>
+			</div>
+			
+			<div class="tab-content"><!--20210615.추가-->
+				<div id="tab-book" class="tab-pane active"><!--20210615.추가-->
+					<ul class="list-card">
+						<li class="card-image">
+							<a href="result-books.html">
+								<div class="image-container" style="background-image:url(images/sample/book-001.jpg)"></div>
+								<div class="text">
+									<h6>제주 돌문화경관 연구</h6>
+									<p>2020-12-20</p>
+								</div>
+							</a>
+						</li>
+						<li class="card-image">
+							<a href="community-photo-view.html">
+								<div class="image-container" style="background-image:url(images/sample/book-002.jpg)"></div>
+								<div class="text">
+									<h6>제주 표류인 이방익의 길을 따라가다: 중국답사기</h6>
+									<p>2020-12-20</p>
+								</div>
+							</a>
+						</li>
+						<li class="card-image">
+							<a href="community-photo-view.html">
+								<div class="image-container" style="background-image:url(images/sample/book-003.jpg)"></div>
+								<div class="text">
+									<h6>일제강점기 제주 지명 문화 사전</h6>
+									<p>2020-12-20</p>
+								</div>
+							</a>
+						</li>
+						<li class="card-image desktop-only">
+							<a href="community-photo-view.html">
+								<div class="image-container" style="background-image:url(images/sample/book-004.jpg)"></div>
+								<div class="text">
+									<h6>제주역사자료총서2 일제하 신문 제주기사 자료집 - 제주신문 초판</h6>
+									<p>2020-12-20</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div><!--//tab-pane--><!--20210615.추가-->
+				
+				
+				<!--20210615.추가-->
+				<div id="tab-history" class="tab-pane">
+					제주역사자료학총서
+				</div><!--//tab-pane-->
+			</div><!--//tab-content-->
+			<!--//20210615.추가-->
+			
+			
+			
+		</div>
+	</div><!--//section book-->
+	
+	
+	<div class="section report-seminar">
+		<div class="content-wrap">
+			<div class="report">
+				<div class="section-header">
+					<h3>연구보고서</h3>
+					<a href="result-report-list.html">더보기</a>
+				</div>
+				<ul class="list-home">
+					<li>
+						<div><span>2020-12</span>14</div>
+						<div>
+							<span>71호</span>
+							<a href="result-report-view.html" class="hyperlink">정조(正祖)의 제주통치론</a>
+						</div>
+					</li>
+					<li>
+						<div><span>2020-12</span>14</div>
+						<div>
+							<span>71호</span>
+							<a href="result-report-view.html" class="hyperlink">이어도 설화 스토리텔링 방안 연구 - 장소성을 중심으로</a>
+						</div>
+					</li>
+					<li>
+						<div><span>2020-12</span>14</div>
+						<div>
+							<span>71호</span>
+							<a href="result-report-view.html" class="hyperlink">제주신화의 현대적 활용 가능성 연구 - 그리스신화의 경우와 비교하여</a>
+						</div>
+					</li>
+				</ul>
+			</div><!--//report-->
+			<div class="seminar">
+				<div class="section-header">
+					<h3>세미나 자료</h3>
+					<a href="result-seminar-list.html">더보기</a>
+				</div>
+				<ul class="list-home">
+					<li>
+						<div><span>2020-12</span>14</div>
+						<div>
+							<span>원내주회</span>
+							<a href="result-seminar-view.html" class="hyperlink">2020 탐라신화의 동아시아적 위상과 과제</a>
+						</div>
+					</li>
+					<li>
+						<div><span>2020-12</span>14</div>
+						<div>
+							<span>원내주회</span>
+							<a href="result-seminar-view.html" class="hyperlink">제4회 제주학대회: 근대성과 제주정체성</a>
+						</div>
+					</li>
+					<li>
+						<div><span>2020-12</span>14</div>
+						<div>
+							<span>원내주회</span>
+							<a href="result-seminar-view.html" class="hyperlink">2020년 제17회 한국방언학회 전국학술대회 언어 및 방언 접촉</a>
+						</div>
+					</li>
+				</ul>
+			</div><!--//report-->
+		</div><!--//content-wrap-->
+	</div><!--//section report,seminar-->
+	
+	<div class="section archive">
+		<div class="content-wrap">
+			<div class="section-header">
+				<span>Archive</span>
+				<h3>아카이브</h3>
+			</div>
+			<form class="form-search">
+				<a href="archive-list.html" class="btn tooltip-top" title="제주학 아카이브 바로가기">inventory_2</a>
+				<div>
+					<input type="search" placeholder="제주학 아카이브 검색" title="제주학 아카이브 검색">
+					<button type="submit" class="ico-search-white btn">검색</button>
+				</div>
+				<a data-toggle="modal" href="modal-archive-search.html" data-target="#modal" class="btn"><span>filter_alt</span><span>상세검색</span></a>
+			</form><!--//form-search-->
+			<ul class="list-card masonry">
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-001.jpg" alt="">
+						<div class="text">
+							<h6>영등굿</h6>
+							<p>고성리 영등굿 배방선에 제물을 실은 모습 [공통설명] 영등굿은 해마다 음력 2월 초하루와 열나흘 사이에 제주도 해안가 마을의 당에서 영등신을 맞이하여 풍어 및 해상안전과 해녀들의 채취물인 소라‧전복‧미역 등의 풍성을 기원하는 굿이다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-002.jpg" alt="">
+						<div class="text">
+							<h6>고광민 민속 사진 - 066</h6>
+							<p>*연월일 : 1992년 여름<br>*장소 : 군산오름<br>*개요 : 군산오름(표고 335m) 남쪽에 있는 ‘아기업게돌’이다. ‘아기업게’는 “어린 아기를 돌보는 사람”이다. ‘아기업게’가 아기를 등에 업고 있는 모양을 하고 있다고 하여 ‘아기업게돌’이라고 한다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-004.jpg" alt="">
+						<div class="text">
+							<h6>「일제하신문기사」제주도는 천산이 풍부 (濟州島は天産が豊富)</h6>
+							<p>현대적 사업시설의 요점(現代的事業施設の要)<br>아리가 식은 총재 말하다(有賀殖銀頭取語る)<br>제주도와 호남지방을 시찰하여 귀임한 아리가(有賀) 식산 총재는 말한다. 제주도는 보고 들으면 매우 상위점이 있다. 사실 말하자면 절해고도라는 점과 여러 종류의 상찰(想察)을 머리에 그리며 갔으나, 실제 시찰한 결과는 조선의 부원(富源)이라는 것을 인정했다. 교통도 좋고 풍토 기후도 조선 내륙과는 매우 특이했지만, 농산물도 풍부하고 보리 30만석, 조 30만석을 생산하고 근년에 감자 재배하는 도민도 근면하고, 여자가 특히 일하는 일본 내지에 가까우므로 자연히 농민은 내지인의 피가 많이 섞어있는 것처럼 생각된다. 일본 복장을 하게 하면 섬의 부인은 일견 내지부인과 분간할 수 없을 정도이다. 쌀, 수전(水田) 약 8백정보 경작지로 하고 4분할 휴경으로 해서 개척의 여지가 많다고 생각된다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-005.jpg" alt="">
+						<div class="text">
+							<h6>2019 제주의 아름다운 여신당 - 구좌읍 김녕리 큰당</h6>
+							<p>▷당명 : 본향 사장빌레 큰당<br>▷당신명 : 관세전부인 또는 큰도안전 큰도부인<br>▷좌정형태 : 독좌형 여(1)<br>▷계보 : 외래신계 농경신<br>▷직능 : -생산, 물고, 호적, 장적 -자손 번창, 곡식 풍등</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-006.jpg" alt="">
+						<div class="text">
+							<h6>구좌읍 하도리 본동 삼신당</h6>
+							<p>제주도 기자(祈子)․산육 신앙<br>제주도 기자･산육 신앙은 삼승할망(생불할망, 불도할망)과 서천꽃밭, 혹은 돼지고기 금기를 어겨 부신(夫神)과 별거한 일뤳당신들의 내력이 가장 잘 알려져 있다. 제주도 기자･산육 신앙은 일반신 신앙, 당신앙, 조상신 신앙뿐 아니라 돌 신앙, 미륵 신앙, 기타 민속 신앙들이 얽혀 다양한 양상을 보인다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-007.jpg" alt="">
+						<div class="text">
+							<h6>해동지도 중 제주삼현도-1</h6>
+							<p>해동지도 중 제주 삼현도</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-008.jpg" alt="">
+						<div class="text">
+							<h6><나의 할머니, 아버지, 그리고 글청></h6>
+							<p>할머니는 천자문을 다 외우신 분이다. 나는 할머니에게서 천자문을 배웠다. 할머니는 나를 귀엽게 생각했다. 앉는 자세 몸을 흔드는 것도 차근 차근 가르치셨다. 하루는 수꾸락에 엿을 반 수자 정도 주셨는데, 너무 맛있다. 두 번 주지는 아니했다. "이거 먹엉 혼저 크라" 여러 날을 먹였다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-009.jpg" alt="">
+						<div class="text">
+							<h6>고광민 민속 사진 - 689</h6>
+							<p>*연월일 : 1984년 여름<br>*장소 : 애월읍 어음리<br>*개요 : ‘정짓문(부엌문)’ 안쪽에 붙여둔 ‘부적’이다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-010.jpg" alt="">
+						<div class="text">
+							<h6>궷물오름 산물</h6>
+							<p>백중제<br>해마다 음력 7월 14일이 되면, 제주도의 여러 마을에서는 온 마을 사람들이 모여 ‘백중제’라는 농사를 위한 제사를 지냈었다. 이 ‘백중제’라는 제사는 다음과 같은 전설이 전해지고 있다. 옛날 차귀뱅뒤에는 백중이라는 목동이 살았다. 하루는 그가 바닷가에서 마소 먹이를 먹이고 있는데 하늘에서 옥황상제가 내려왔다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-011.jpg" alt="">
+						<div class="text">
+							<h6>아기구덕</h6>
+							<p>아기구덕에 애기를 놓고 밭이나 바다에 갈 때 등에 지고 다녔다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-012.jpg" alt="">
+						<div class="text">
+							<h6>2017 제주해녀의 얼굴 - 남원어촌계 해녀</h6>
+							<p>남원리어촌계 해녀 (서귀포시 남원읍 남원리)</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-013.jpg" alt="">
+						<div class="text">
+							<h6>눈곽</h6>
+							<p>물안경을 보관하던 나무상자. 양옆에 홈을 파 뚜껑을 미닫이로 만듦. 상자가 떨어지거나 충격을 받았을 때 눈이 안전하기 위해서다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-014.jpg" alt="">
+						<div class="text">
+							<h6>이스렁오름</h6>
+							<p>이사랑악(伊士郞岳)이라고도 한다. 명칭의 정확한 유래는 밝혀지지 않았다. 높이 1352m, 둘레 1549m, 총면적 15만 5494㎡ 규모의 기생 화산으로 한라산국립공원 안에 있으며 전체적인 모양은 원추형이다. 남쪽과 동쪽 기슭 일대는 푸른 초원으로 덮여 있고, 정상부를 포함한 주변 일대는 평지를 이룬다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-015.jpg" alt="">
+						<div class="text">
+							<h6>탐라순력도 - 대정현: 대정강사</h6>
+							<p>1702년(숙종 28) 11월 12일, 대정현에 머물면서 시행한 강사의 장면을 그린 것이다.<br>이 강사에는 도훈장 전 현감 문영후와 각 면 훈장 5명, 각 면 교사장 5명, 강유 42명, 사원 21명이 참가했다.<br>대정현성은 성곽이 둘러쳐진 타원형의 성이다. 성벽 위에는 여장(성 위에 있는 낮은 담으로 총구와 타구가 있는 구조물)이 설치되어 있고, 회곽도를 오르기 위한 돌계단이 성문 옆에 축조되어 있다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-003.jpg" alt="">
+						<div class="text">
+							<h6>구좌읍 하도리 각시당</h6>
+							<p>제주도 기자(祈子)․산육 신앙<br>제주도 기자･산육 신앙은 삼승할망(생불할망, 불도할망)과 서천꽃밭, 혹은 돼지고기 금기를 어겨 부신(夫神)과 별거한 일뤳당신들의 내력이 가장 잘 알려져 있다. 제주도 기자･산육 신앙은 일반신 신앙, 당신앙, 조상신 신앙뿐 아니라 돌 신앙, 미륵 신앙, 기타 민속 신앙들이 얽혀 다양한 양상을 보인다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="card-bgimg">
+					<a href="archive-view.html">
+						<img src="images/sample/archive-016.jpg" alt="">
+						<div class="text">
+							<h6>인기척에 놀라 멈칫 고개를 돌리는 숫노루</h6>
+							<p>털색은 황갈색, 회갈색이며 크기는 95~151cm이다. 무게는 15~50kg으로 여름털은 황갈색이고 겨울털은 회갈색을 띠며 겨울에는 엉덩이에 흰색 무늬가 뚜렷하다. 새끼는 흰색 점과 줄무늬를 가지고 있다. 귀가 크며, 수컷은 짧고 세 개의 가지로 나뉜 뿔을 가지고 있다.</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<a href="archive-list.html" class="btn-more">더보기<span>add</span></a>
+		</div>
+	</div><!--//section archive-->
+	
+</div><!--//container-->
+
+<footer class="global-footer"></footer>
+
+<!--Modal-->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-archive-search" role="document">
+        <div class="modal-content"></div>
+    </div>
+</div><!--//modal-->
+
+</body>
+</html>

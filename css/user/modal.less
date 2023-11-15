@@ -1,0 +1,168 @@
+// main: "style.less"
+
+// Modals
+// Container that the modal scrolls within
+.modal{display:none;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:@zindex-modal;-webkit-overflow-scrolling:touch;outline:0;
+	// When fading in the modal, animate it to slide down
+	&.fade .modal-dialog{.translate(0, -25%);// .transition-transform(~"0.3s ease-out");
+	}
+	&.in .modal-dialog{.translate(0, 0)}
+}
+.modal-open{overflow:hidden;
+	.modal{overflow-x:hidden;overflow-y:auto}
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog{position:relative;width:auto;margin:10px}
+
+// Actual modal
+.modal-content {
+	position: relative;
+	background-color: @modal-content-bg;
+	border-radius: 0;
+	.box-shadow(0 3px 9px rgba(0, 0, 0, .5));
+	outline: 0;
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	&.fade { .opacity(0); }
+	&.in { .opacity(@modal-backdrop-opacity); }
+}
+.modal-header{padding:@modal-title-padding-mobile;border-bottom:1px solid @modal-header-border-color;
+	@media @desktop{padding:@modal-title-padding-desktop}
+	&:extend(.clearfix all);
+	.close{.btn;.abs;top:@modal-title-padding-mobile;right:@modal-title-padding-mobile;.material-icons;.c(#666);//.w(24px);.h(24px);.bgimg('ico-close.png');.bgs;.text-hidden}
+		@media @desktop{right:24px}
+	}
+}
+.modal-title{margin:0;line-height:@modal-title-line-height;
+	h3{.fs(16);.bold}
+}
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body{position:relative;padding:@modal-inner-padding-mobile;
+	@media @desktop{padding:@modal-title-padding-desktop}
+	> h3{.fs(16);.bold}
+	> h3 + form{.mt(20px)}
+}
+.modal-footer{padding:@modal-footer-padding-mobile;border-top: 1px solid @modal-footer-border-color;
+	@media @desktop{padding:@modal-footer-padding-desktop}
+	// text-align: right; // right align buttons
+	&:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+	
+	// Properly space out buttons
+	.btn + .btn {
+		margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+		margin-left: 5px;
+	}
+	// but override that for button groups
+	.btn-group .btn + .btn {
+		margin-left: -1px;
+	}
+	// and override it for block buttons as well
+	.btn-block + .btn-block {
+		margin-left: 0;
+	}
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+	// Automatically set modal's width for larger viewports
+	.modal-dialog {
+		width: @modal-md;
+		margin: 30px auto;
+	}
+	.modal-content {
+		.box-shadow(0 5px 15px rgba(0, 0, 0, .5));
+	}
+	.modal-sm { width: @modal-sm; }
+}
+@media @desktop {
+	.modal-lg { width: @modal-lg; }
+}
+.modal-notitle{
+	.modal-header,.modal-footer{.bnone}
+	.modal-body,.modal-footer{.tc}
+}
+.modal-content{
+	.form{
+		> .form__group{
+			&:first-child{.mt(0)}
+		}
+	}
+}
+// 아카이브 상세 검색
+.modal-archive-search{
+	.i-group{.overh;.mt(12px);
+		label{.block;.fl;.w(100px);.mtb(8px)}
+	}
+	.modal-footer{.overh;
+		.btn{.btn-h48;.btn-radius;
+			@media @desktop{.btn-h52;.btn-radius}
+			&:first-child{.fl;min-width:120px;
+				@media @desktop{min-width:160px}
+			}
+			&:last-child{.fr}
+		}
+		i{.material-icons;.mr(4px);.fs(20);.valign}
+	}
+}
+// .modal-report-search{
+// 	.form{
+// 		.i-vertical{
+// 			&:first-child{.mt(0)}
+// 		}
+// 	}	
+// 	.section-result{.mt(20px);.pt(20px);.bt;.tc;
+// 		span{.in-block;.mr(12px);.bold;.valign}
+// 		ul{.bu-split;.in-block}
+// 	}
+// }
+// .modal-quarter{
+// 	.modal-body{
+// 		> p,> ul{.mt(4px);.c(#666)}
+// 		> ul{.bu-split;
+// 			@media @mobile{.fs(12)}
+// 		}
+// 		h5.caption{.mt(20px)}
+// 	}
+// 	.form-request-status{.bg(#f4f4f4);
+// 		> td{.overh;
+// 			@media @mobile{.p(16px) !important}
+// 			@media @fromtablet{.p(24px 32px) !important}
+// 		}
+// 		.i-vertical{
+// 			&:not(:first-child){.mt(16px)}
+// 		}
+// 	}
+// 	.table-scroll{max-height:280px;
+// 		@media @fromtablet{max-height:500px}
+// 	}
+// }
+// .modal-reservation-extend{.w(1070px);
+// 	.modal-body{.overh;.p(24px 20px);
+// 		.form{.fl;.w(240px);
+// 			.checkbox-container{.mtb(20px)}
+// 			textarea{.h(60px)}
+// 			.i-vertical{
+// 				&:first-child{.mt(8px)}
+// 			}
+// 		}
+// 		.calendar-wrap{.fr;.w(770px);
+// 			.calendar{.fl}
+// 			.calendar-header{.mb(16px)}
+// 		}
+// 	}
+// }

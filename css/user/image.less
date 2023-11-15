@@ -1,0 +1,97 @@
+// main: "style.less"
+
+// Image, Icon, Video
+img,video{max-width:100%;height:auto}
+
+.image-container,.video-container{.overh;.rel;.radius(8px);.bgs(cover);.bgpos(50%,50%);
+	@media @fromtablet{.radius(12px)}
+}
+.video-container{.overh;.rel;height:0;.pb(56.25%);
+	iframe,object,embed{.abs;top:0;left:0;width:100%;height:100%}
+}
+.pdf-container{width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+.img-square{.rel;
+	&:after{content:"";.block;.pb(100%)}
+	img{.abs;width:100%;height:100%}
+}
+.img-bg{position: absolute;left: 0;top: 0;right: 0;bottom: 0;min-width: 100%;min-height:100%;object-fit: cover;object-position: 50% 50%;z-index:-1}
+.page-archive{
+	.page-title{
+		&:after{.bgimg('bg-archive.jpg');
+			@media @desktop{.bgimg('bg-archive-desktop.jpg')}
+		}
+	}
+	// &.galot{
+	// 	.page-title{
+	// 		&:after{.bgimg('galot/bg-galot-6.jpg')}
+	// 	}
+	// }
+}
+.page-about{
+	.page-title{
+		&:after{.bgimg('bg-about.jpg');
+			@media @desktop{.bgimg('bg-about-desktop.jpg')}
+		}
+	}
+	// &.galot{
+	// 	.page-title{
+	// 		&:after{.bgimg('galot/bg-galot-1.jpg')}
+	// 	}
+	// }
+}
+.page-business{
+	.page-title{
+		&:after{.bgimg('bg-business.jpg');
+			@media @desktop{.bgimg('bg-business-desktop.jpg')}
+		}
+	}
+}
+.page-community{
+	.page-title{
+		&:after{.bgimg('bg-community.jpg');
+			@media @desktop{.bgimg('bg-community-desktop.jpg')}
+		}
+	}
+}
+.page-result{
+	.page-title{
+		&:after{.bgimg('bg-result.jpg');
+			@media @desktop{.bgimg('bg-result-desktop.jpg')}
+		}
+	}
+}
+.page-information{
+	.page-title{
+		&:after{.bgimg('bg-information.jpg')}
+	}
+}
+.page-site{
+	.page-title{
+		&:after{.bgimg('bg-site.jpg');
+			@media @desktop{.bgimg('bg-site-desktop.jpg')}
+		}
+	}
+}
+.page-history{
+	.page-title{
+		&:after{.bgimg('galot/bg-galot-2.jpg')}
+	}
+}
+.page-knowledge{
+	.page-title{
+		&:after{.bgimg('galot/bg-galot-3.jpg')}
+	}
+}
+.page-culture{
+	.page-title{
+		&:after{.bgimg('galot/bg-galot-4.jpg')}
+	}
+}
+.page-value{
+	.page-title{
+		&:after{.bgimg('galot/bg-galot-5.jpg')}
+	}
+}

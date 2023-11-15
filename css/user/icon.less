@@ -1,0 +1,46 @@
+// main: "style.less"
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+// .material-icons {
+// 	font-family: 'Material Icons';
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	font-size: 24px;  /* Preferred icon size */
+// 	display: inline-block;
+// 	line-height: 1;
+// 	text-transform: none;
+// 	letter-spacing: normal;
+// 	word-wrap: normal;
+// 	white-space: nowrap;
+// 	direction: ltr;
+	
+// 	/* Support for all WebKit browsers. */
+// 	-webkit-font-smoothing: antialiased;
+// 	/* Support for Safari and Chrome. */
+// 	text-rendering: optimizeLegibility;
+	
+// 	/* Support for Firefox. */
+// 	-moz-osx-font-smoothing: grayscale;
+	
+// 	/* Support for IE. */
+// 	font-feature-settings: 'liga';
+// }
+.code-plus(@size:24px,@color,@thickness:1px){.block;.w(@size);.h(@size);background:linear-gradient(@color,@color),linear-gradient(@color,@color);background-position:center;background-size:100% @thickness,@thickness 100%;background-repeat:no-repeat}
+*[class^="ico-"]{.w(24px);.h(24px);.bgs;.text-hidden}
+.ico-facebook{.bgimg('../../images/user/icons/facebook.png');
+	&:hover{.bgimg('../../images/user/icons/facebook-color.png')}
+}
+.ico-instagram{.bgimg('../../images/user/icons/instagram.png');
+	&:hover{.bgimg('../../images/user/icons/instagram-color.png')}
+}
+.ico-youtube{.bgimg('../../images/user/icons/youtube.png');
+	&:hover{.bgimg('../../images/user/icons/youtube-color.png')}
+}
+.ico-religion{.bgimg('../../images/user/icons/religion.png');
+	// &:hover{.bgimg('icons/religion-white.png')}
+}
+.ico-social-science{.bgimg('../../images/user/icons/social-science.png');
+	// &:hover{.bgimg('icons/social-science-white.png')}
+}
+.ico-search{.bgimg('../../images/user/icons/search.png')}
+.ico-search-white{.bgimg('../../images/user/icons/search-white.png')}

@@ -1,0 +1,128 @@
+// main: "style.less"
+
+// Utilities
+.dp-table{display:table;
+	> *{display:table-cell}
+}
+
+// Align
+.horiz-center{.rel;.fr;left:-50%;
+	> *{.rel;.fl;left:50%}
+	.btn{.mrl(auto)}
+}
+.vert-middle{
+	&:before,> *{.in-block;.valign}
+	&:before{content:'';height:100%}
+}
+.vert-middle-abs(@height){.abs;top:50%;.mt( ( -@height / 2 ) )}
+.center-abs(@width,@height){.abs;top:50%;left:50%;width:@width;height:@height;.m( ( -@height / 2 ) 0 0 ( -@width / 2 ) )}
+.bu-dot(@color:#eee,@top:50%,@size:6px){
+	> li{.rel;.pl(20px);
+		&:before{content:'';.block;.abs;top:@top;left:0;width:@size;height:@size;.mt(-@size/2);.radius-oval;.bg(@color)}
+	}
+	.bu-dot-green{
+		&:before{.bg(@green)}
+	}
+	.bu-dot-red{
+		&:before{.bg(@red)}
+	}
+}
+.bu-minus{
+	& > li{.rel;.pl(16px);
+		&:before{content:'-';.block;.fl;.abs;top:0;left:0;width:6px;height:6px}
+	}
+}
+.bu-decimal{counter-reset:ol-counter;
+	> li{.rel;
+		&:before{content:counter(ol-counter);counter-increment:ol-counter;.abs;top:0;left:0}
+	}
+}
+.bu-decimal-dot{counter-reset:ol-counter;
+	> li{.rel;.pl(16px);
+		&:before{content:counter(ol-counter)".";counter-increment:ol-counter;.abs;top:0;left:0}
+	}
+}
+.bu-decimal-default{
+	&,> li{list-style: decimal}
+	> li{.ml(1.5rem)}
+}
+.bu-decimal-round{counter-reset: ol-counter;//counter-reset:ol-counter;
+	> li{.rel;.pl(24px);
+		&:before{content:counter(ol-counter)")";counter-increment:ol-counter;.abs;top:0;left:0}
+	}
+}
+.bu-split(@height:10px,@gutter:10px,@color:@border-color-base,@opacity:1){.list-horiz;
+	> *{.rel;.pr(@gutter * 2);
+		&:after{content:'';.block;.vert-middle-abs(@height);right:@gutter - 2;width:1px;height:@height;.bg(@color);.opacity(@opacity)}
+		&:last-child{.pr(0);
+			&:after{width:0}
+		}
+	}
+}
+.b-split(@height:10px,@side:right,@gutter:1px,@color:@border-color-base,@opacity:1){content:'';.block;.vert-middle-abs(@height);@{side}:@gutter;width:1px;height:@height;.bg(@color);.opacity(@opacity)}
+.box-shadow(@x:3px,@y:10px,@blur:15px,@color:rgba(0,0,0,0.1)){
+ 	-webkit-box-shadow: @x @y @blur @color;
+    box-shadow: @x @y @blur @color
+}
+.box-shadow-material{.radius(4px);.bgw;box-shadow:0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12),0 1px 3px 0 rgba(0,0,0,0.2);
+	&:hover{box-shadow:0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12),3px 5px 5px 0 rgba(0,0,0,.2)}
+}
+.rgba(@colour, @alpha){
+	@alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+	@ieAlphaColour: argb(@alphaColour);
+	background-color: @colour; // Fallback for older browsers
+	background-color: @alphaColour; 
+	// IE hacks
+	zoom: 1; // hasLayout
+	background-color: transparent\9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+        filter:  ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})";  // IE 6 & 7	
+}
+
+.translate(@x; @y) {
+	-webkit-transform: translate(@x, @y);
+		-ms-transform: translate(@x, @y); // IE9 only
+		 -o-transform: translate(@x, @y);
+			transform: translate(@x, @y);
+}
+.transition(@transition) {
+	-webkit-transition: @transition;
+		 -o-transition: @transition;
+			transition: @transition;
+}
+.line-arrow(@width:4em,@height:4em,@size:4,@border:1px,@color:#333){.overh;.block;.abs;.w(@width);.h(@height);.fs(@size);//set the size for arrow
+	&.left,&.right{top:50%;.mt(-@height)}
+	&.left{left:0;.bt(@color,@border);.bl(@color,@border);transform:rotate(-54deg) skew(-20deg)}
+	&.right{right:0;.bt(@color,@border);.br(@color,@border);transform:rotate(54deg) skew(20deg)}
+	&.top,&.bottom{left:50%;.ml(-@width / 2)}
+	&.top{top:0;.bt(@color,@border);.bl(@color,@border);transform:rotate(45deg)}
+	&.bottom{bottom:0;.bb(@color,@border);.br(@color,@border);transform:rotate(45deg)}
+}
+.line-arrow{.line-arrow()}
+
+@keyframes zoomout{
+	0% {
+		transform: scale(1.08) rotate(0.0001deg);
+	}
+	100% {
+		transform: scale(1) rotate(0deg);
+	}
+}
+.zoomout{
+	animation: zoomout 8s linear alternate both;
+}
+@keyframes fadeInUp{
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 50px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+.fadeinup{
+	animation: fadeInUp .8s both;
+	&.item2{animation-delay: 0.2s}
+	&.item3{animation-delay: 0.4s}
+}

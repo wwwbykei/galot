@@ -1,0 +1,178 @@
+// main: "style.less"
+
+/* Variables */
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-md-min:              (@screen-sm + 1);
+@screen-md:                  1240px;
+@screen-md-max:              (@screen-md);
+@screen-lg:                  (@screen-md + 1);
+
+@mobile: ~"(max-width:@{screen-sm})";
+@tablet: ~"(min-width:@{screen-md-min}) and (max-width:@{screen-md-max})";
+@totablet: ~"(max-width:@{screen-md-max})";
+@fromtablet: ~"(min-width:@{screen-md-min})";
+@desktop: ~"(min-width:@{screen-lg})";
+
+// Z-index
+@z-navbar: 1000;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+@zindex-dropdown:          1000;
+
+/* Layout */
+@gnb-width-mobile: 360px;
+@gnb-height-mobile: 72px;
+@gnb-height-tablet: 206px;
+@gnb-height-desktop: 161px;
+// @content-wrap-max: 1100px;
+@content-wrap-width: 1200px;
+@board-wrap-width: 900px;
+@gap-mobile: 32px;
+@gap-desktop: 64px;
+
+/* border */
+@border-radius-base: 0;
+@border-color-base: #e1e1e1;
+
+// Typography
+@font-family-base: 'Apple SD Gothic Neo','애플 SD 산돌고딕 Neo','Montserrat','Noto Sans KR','Spoqa Han Sans Neo','나눔고딕','NanumGothic','맑은 고딕','Malgun Gothic','돋움',Dotum,sans-serif; 
+@font-size-base: 16px;
+@font-size-large: 18px;
+@font-size-small: 12px;
+
+/* Colors */
+@body-bg: #fff;
+@navbar-bg: #fff;
+@footer-bg: #fff;
+@text-color: #333;
+@text-gray: #999;
+@text-medium-gray: #666;
+@bg-gray: #f4f4f4;
+@link-color: #0044cc;
+
+@color-primary: @brown;
+@color-primary-dark: @brown-dark;
+@color-secondary: @navy;
+@brown: #B6A495;
+@brown-dark: #76604E;
+@brown-galot: #624E3E;
+@navy: #242538;
+@blue-dark: #224da0;
+@blue: #106CB6;
+@skyblue: #00A1E9;
+@skyblue-light: #6EC3EE;
+@green-light: #85CBBF;
+@gray-blue: #b0c7dc;
+
+// @yellow: #F3D351;
+@red: #FF5165;
+// @red-light: #FF7686;
+@green: #20C4CB;
+// @violet-50: #e9dff3;
+// @violet-70: #d9b6fc;
+// @violet-100: #9b94fd;
+// @blue-gray-100: #f1f2f7;
+// @blue-gray: #3f4c67;
+
+@gray-100: #f3f3f3;
+@gray-200: #d3d3d3;
+@gray-400: #e4e4e4;
+@gray-600: #999;
+@gray-700: #797979;
+
+/* list */
+@list-row-height: 54px;
+
+/* Form */
+@line-height-base: 1.5;
+@input-height-base: 40px;
+@input-height-large: 48px;
+@input-height-small: 32px;
+@input-padding-base: 8px 16px 9px;
+@input-padding-large: 11px 16px;
+@input-color-focus: @text-color;
+@input-color-placeholder: #999;
+@input-bg-base: #fff;
+@input-border-color: @border-color-base;
+@input-border-color-focus: @color-primary;
+@input-radius-base: @border-radius-base;
+
+// Dropdown
+@dropdown-padding-base: 9px 32px 8px 16px;
+@dropdown-padding-large: 11px 32px 11px 16px;
+@dropdown-radius: @border-radius-base;
+
+/* Button */
+@btn-height-base: 40px;
+@btn-height-large: 48px;
+@btn-height-xsmall: 20px;
+@btn-height-small: @input-height-small;
+@btn-radius-base: 0;//@btn-height-base / 2;
+@btn-radius-large: 0;//@btn-height-large / 2;
+
+// Pagination
+@pagination-color:                     @text-color;
+@pagination-bg:                        #fff;
+@pagination-border: @border-color-base;
+
+@pagination-hover-color:               #fff;
+@pagination-hover-bg:                  transparent;
+@pagination-hover-border: @pagination-border;
+
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 transparent;
+@pagination-active-border: @pagination-border;
+
+@pagination-disabled-color:           transparent;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border: @pagination-border;
+
+// Modals
+@modal-title-padding-mobile: 20px;
+@modal-title-padding-desktop: 24px 32px;
+@modal-inner-padding-mobile: 20px;
+@modal-inner-padding-desktop: 32px;
+@modal-footer-padding-mobile: 0 20px 24px;
+@modal-footer-padding-desktop: 0 32px 40px;
+@modal-title-line-height:     @line-height-base;
+@modal-content-bg:                             #fff;
+@modal-content-border-color:                   rgba(0, 0, 0, .2);
+//** Modal content border color **for IE8**
+@modal-content-fallback-border-color:          #999;
+//** Modal backdrop background color
+@modal-backdrop-bg:           #000;
+//** Modal backdrop opacity
+@modal-backdrop-opacity:      .5;
+//** Modal header border color
+@modal-header-border-color:   #e5e5e5;
+//** Modal footer border color
+@modal-footer-border-color:   transparent;//@modal-header-border-color;
+@modal-lg:                    1100px;
+@modal-md:                    700px;
+@modal-sm:                    300px;
+
+// table
+@table-cell-padding: 16px 20px;
+
+// Tooltips - tooltipster
+@tooltip-max-width:			200px;
+@tooltip-font-size:			12px;
+@tooltip-color:				#fff;
+@tooltip-border:			none;
+@tooltip-radius:			4px; 
+@tooltip-bg:				@color-primary-dark;
+@tooltip-opacity:			.9;
+@tooltip-arrow-width:		6px;
+@tooltip-arrow-color:		@tooltip-bg;
+@tooltip-padding:			8px 16px;
+
+// Slick Slider
+@slick-shadow-padding:		30px;
+@slick-arrow-size:			40px;
+@slick-arrow-margin:		60px;
+@slick-arrow-bg:			#fff;
+@slick-arrow-color:			#333;
